@@ -1,0 +1,18 @@
+{
+    "fieldmappings":[
+        {"field":"language", "outputname":"Language", "type":"language"},
+        {"field":"vid", "outputname":"VID", "type":"random", "digit": 16, "number": 50},
+        {"field":"fullname", "outputname":"FullName", "type":"name"},
+        {"field":"gender", "outputname":"Gender", "type":"gender"},
+        {"field":"dob", "outputname":"DOB", "type":"date", "min_date":"1960/01/01", "max_date":"2020/01/01", "number": 50},
+        {"field":"phoneNo", "outputname":"PhoneNo", "type":"random", "digit":10, "number": 50},
+        {"field":"email", "outputname":"email", "type":"email"},
+        {"field":"street", "outputname":"Street", "type":"street"},
+        {"field":"city", "outputname": "City","type":"city"},
+        {"field":"region", "outputname":"Region", "type":"region"},
+        {"field":"province", "outputname":"Province", "type":"province"},
+        {"field":"postalcode", "outputname": "PostalCode", "type":"random", "digit":6, "number":50}
+        
+    ],
+    "delimeter": "|"
+}
