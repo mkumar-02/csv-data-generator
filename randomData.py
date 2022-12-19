@@ -44,8 +44,9 @@ for i in range(0,totalcolumns):
         # print(data["fieldmappings"][i])
         minDate = data["fieldmappings"][i]["min_date"]
         maxDate = data["fieldmappings"][i]["max_date"]
+        dateFormat = data['fieldmappings'][i]['format']
         for j in range(data["fieldmappings"][i]["number"]):
-            fieldList[i] += [dateGenerator.dateGenerate(minDate, maxDate)]
+            fieldList[i] += [dateGenerator.dateGenerate(minDate, maxDate,dateFormat)]
 
     elif(datafileList[i] == 'name'):
         for j in range(data['fieldmappings'][i]['number']):

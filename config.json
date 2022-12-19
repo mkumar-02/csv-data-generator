@@ -4,7 +4,7 @@
         {"field":"vid", "outputname":"VID", "type":"random", "digit": 16, "number": 50},
         {"field":"fullname", "outputname":"FullName", "type":"name", "combination": 3, "separater":"-", "number": 20},
         {"field":"gender", "outputname":"Gender", "type":"gender"},
-        {"field":"dob", "outputname":"DOB", "type":"date", "min_date":"1960/01/01", "max_date":"2020/01/01", "number": 50},
+        {"field":"dob", "outputname":"DOB", "type":"date", "format":"dd/mm/yyyy", "min_date":"01/01/2020", "max_date":"01/01/2022", "number": 50},
         {"field":"phoneNo", "outputname":"PhoneNo", "type":"random", "digit":10, "number": 50},
         {"field":"email", "outputname":"email", "type":"email", "number":50},
         {"field":"address", "outputname": "Address", "type":"address", "combination": 2, "separater": " ", "number": 20},
