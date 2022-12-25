@@ -1,6 +1,6 @@
 import random
 
-def randD_digit(digit):
+def generate_number(digit):
     min_num = pow(10, digit-1)
     max_num = pow(10, digit)-1
 

@@ -1,18 +1,19 @@
 {
-    "fieldmappings":[
-        {"field":"language", "outputname":"Language", "type":"language"},
-        {"field":"vid", "outputname":"VID", "type":"random", "digit": 16, "number": 50},
-        {"field":"fullname", "outputname":"FullName", "type":"name", "combination": 3, "separater":"-", "number": 20},
-        {"field":"gender", "outputname":"Gender", "type":"gender"},
-        {"field":"dob", "outputname":"DOB", "type":"date", "format":"dd/mm/yyyy", "min_date":"01/01/2020", "max_date":"01/01/2022", "number": 50},
-        {"field":"phoneNo", "outputname":"PhoneNo", "type":"random", "digit":10, "number": 50},
-        {"field":"email", "outputname":"email", "type":"email", "number":50},
-        {"field":"address", "outputname": "Address", "type":"address", "combination": 2, "separater": " ", "number": 20},
-        {"field":"street", "outputname":"Street", "type":"street"},
-        {"field":"city", "outputname": "City","type":"city"},
-        {"field":"region", "outputname":"Region", "type":"region"},
-        {"field":"province", "outputname":"Province", "type":"province"},
-        {"field":"postalcode", "outputname": "PostalCode", "type":"random", "digit":6, "number":50}
+    "folder_name":"philippines",
+    "field_mappings":[
+        {"field":"language", "file_name":"language", "type":"given"},
+        {"field":"vid", "type":"random", "length": 16, "records": 50},
+        {"field":"fullname", "file_name":"name", "type":"multiple", "merge": 2, "separator":" ", "records": 20},
+        {"field":"gender", "file_name":"gender", "type":"given"},
+        {"field":"dob", "type":"date", "format":"dd-mm-yyyy", "min_date":"01-01-2020", "max_date":"01-01-2022", "records": 50},
+        {"field":"phoneNo", "type":"random", "length":10, "records": 50},
+        {"field":"email", "file_name":"name", "type":"email", "number_length":3, "records":50},
+        {"field":"address", "file_name":"address", "type":"multiple", "merge": 2, "separator": " ", "records": 20},
+        {"field":"street", "file_name":"street", "type":"given"},
+        {"field":"city","file_name":"city", "type":"given"},
+        {"field":"region", "file_name":"region", "type":"given"},
+        {"field":"province", "file_name":"province", "type":"given"},
+        {"field":"postalcode", "type":"random", "length":6, "records":50}
         
     ],
     "delimeter": "|"
