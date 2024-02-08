@@ -71,6 +71,14 @@ for i in range(total_columns):
                 else:
                     emailList += random.choice(lines).strip().lower() + str(random_num_generator.generate_number(num_length))+ random.choice(domainList)
             field_data[i] += [emailList]
+    
+    # elif field_type[i] == 'previous':
+    #     name = field_data[0]
+    #     if data['field_mappings'][i]['field'] == 'given_name':
+    #         field_data[i] = name.split()[0]
+    #     else:
+    #         field_data[i] = name.split()[1]
+        
 
     else:
         with open(f'./data/{data["folder_name"]}/{data["field_mappings"][i]["file_name"]}','r') as f:
@@ -91,6 +99,9 @@ with open('csvFile.csv','w',newline="") as f:
 
     for i in range(0, n):
         row_data = [random.choice(j) for j in field_data]
+        row_data[0] = row_data[0].upper()
+        row_data[1] = row_data[0].split()[0].upper()
+        row_data[2] = row_data[0].split()[1].upper()
         write_rows.writerow(row_data)
 
 
