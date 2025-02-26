@@ -51,9 +51,9 @@ for i in range(total_columns):
 
                 for j in range(data['field_mappings'][i]['merge']):
                     if(len(field_merge) == 0):
-                        field_merge += random.choice(lines).strip().capitalize()
+                        field_merge += random.choice(lines).strip().upper()
                     else:
-                        field_merge += f"{data['field_mappings'][i]['separator']}" + random.choice(lines).strip().lower()
+                        field_merge += f"{data['field_mappings'][i]['separator']}" + random.choice(lines).strip().upper()
     
             field_data[i] += [field_merge]
 
@@ -93,15 +93,23 @@ for i in range(total_columns):
 with open('csvFile.csv','w',newline="") as f:
     write_rows = csv.writer(f, delimiter=f"{data['delimeter']}")
 
+    header_fields.append('is_registrant')
+    header_fields.append('active')
+    header_fields.append('company_id')
+    header_fields.append('given_name')
+    header_fields.append('family_name')
+
     write_rows.writerows([header_fields])
 
     n = int(input('no of records: '))
 
     for i in range(0, n):
         row_data = [random.choice(j) for j in field_data]
-        row_data[0] = row_data[0].upper()
-        row_data[1] = row_data[0].split()[0].upper()
-        row_data[2] = row_data[0].split()[1].upper()
+        row_data.append('true')
+        row_data.append('true')
+        row_data.append(1)
+        row_data.append(row_data[0].split(' ')[0])
+        row_data.append(row_data[0].split(' ')[-1])
         write_rows.writerow(row_data)
 
 

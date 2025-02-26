@@ -2,12 +2,9 @@
     "folder_name":"philippines",
     "field_mappings":[
         {"field":"name", "file_name":"name", "type":"multiple", "merge": 2, "separator":" ", "records": 202},
-        {"field":"given_name", "file_name":"name", "type":"previous"},
-        {"field":"family_name", "file_name":"name", "type":"previous"},
         {"field":"gender", "file_name":"gender", "type":"given"},
         {"field":"birthdate", "type":"date", "format":"dd/mm/yyyy", "min_date":"01/01/2020", "max_date":"01/01/2022", "records": 50},
-        {"field":"email", "file_name":"name", "type":"email", "number_length":3, "records":50},
-        {"field":"address", "file_name":"address", "type":"multiple", "merge": 2, "separator": " ", "records": 20}
+        {"field":"email", "file_name":"name", "type":"email", "number_length":3, "records":50}
     ],
-    "delimeter": "|"
+    "delimeter": ","
 }
