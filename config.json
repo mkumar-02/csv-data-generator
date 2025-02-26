@@ -1,20 +1,10 @@
 {
     "folder_name":"philippines",
     "field_mappings":[
-        {"field":"language", "file_name":"language", "type":"given"},
-        {"field":"vid", "type":"random", "length": 16, "records": 50},
-        {"field":"fullname", "file_name":"name", "type":"multiple", "merge": 2, "separator":" ", "records": 20},
+        {"field":"name", "file_name":"name", "type":"multiple", "merge": 2, "separator":" ", "records": 202},
         {"field":"gender", "file_name":"gender", "type":"given"},
-        {"field":"dob", "type":"date", "format":"dd-mm-yyyy", "min_date":"01-01-2020", "max_date":"01-01-2022", "records": 50},
-        {"field":"phoneNo", "type":"random", "length":10, "records": 50},
-        {"field":"email", "file_name":"name", "type":"email", "number_length":3, "records":50},
-        {"field":"address", "file_name":"address", "type":"multiple", "merge": 2, "separator": " ", "records": 20},
-        {"field":"street", "file_name":"street", "type":"given"},
-        {"field":"city","file_name":"city", "type":"given"},
-        {"field":"region", "file_name":"region", "type":"given"},
-        {"field":"province", "file_name":"province", "type":"given"},
-        {"field":"postalcode", "type":"random", "length":6, "records":50}
-        
+        {"field":"birthdate", "type":"date", "format":"dd/mm/yyyy", "min_date":"01/01/2020", "max_date":"01/01/2022", "records": 50},
+        {"field":"email", "file_name":"name", "type":"email", "number_length":3, "records":50}
     ],
-    "delimeter": "|"
+    "delimeter": ","
 }
